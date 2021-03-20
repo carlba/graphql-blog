@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  graphql-blog-sql:
+    container_name: graphql-blog-sql
+    image: postgres
+    environment:
+      POSTGRES_USER: graphql-blog
+      POSTGRES_PASSWORD: graphql-blog
+      POSTGRES_DB: graphql-blog
+    ports:
+      - '5434:5432'
+    volumes:
+      - graphql_blog_sql_data_db:/var/lib/postgresql/data
+
+volumes:
+  graphql_blog_sql_data_db:
