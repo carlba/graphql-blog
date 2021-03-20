@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Post } from '../posts/entities/post.entity';
 
 @Module({
   imports: [
@@ -10,6 +11,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'graphql-blog',
       password: 'graphql-blog',
       database: 'graphql-blog',
+      entities: [Post],
+      synchronize: true,
+      autoLoadEntities: true,
     }),
   ],
 })
