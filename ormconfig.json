@@ -1,0 +1,18 @@
+[
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5434,
+    "username": "graphql-blog",
+    "password": "graphql-blog",
+    "database": "graphql-blog",
+    "entities": ["dist/**/*.entity{ .ts,.js}"],
+    "synchronize": false,
+    "migrations": ["dist/migrations/*{.ts,.js}"],
+    "migrationsRun": true,
+    "cli": {
+      "migrationsDir": "src/migrations"
+    }
+  }
+]

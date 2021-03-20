@@ -12,8 +12,9 @@ import { Post } from '../posts/entities/post.entity';
       password: 'graphql-blog',
       database: 'graphql-blog',
       entities: [Post],
-      synchronize: true,
       autoLoadEntities: true,
+      migrations: ['dist/migrations/*{.ts,.js}'],
+      migrationsRun: true,
     }),
   ],
 })
