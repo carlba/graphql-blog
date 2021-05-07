@@ -1,0 +1,78 @@
+/* eslint-disable */
+
+export const AllTypesProps: Record<string,any> = {
+	Query:{
+		post:{
+			id:{
+				type:"Int",
+				array:false,
+				arrayRequired:false,
+				required:true
+			}
+		}
+	},
+	Mutation:{
+		createPost:{
+			createPostInput:{
+				type:"CreatePostInput",
+				array:false,
+				arrayRequired:false,
+				required:true
+			}
+		},
+		updatePost:{
+			updatePostInput:{
+				type:"UpdatePostInput",
+				array:false,
+				arrayRequired:false,
+				required:true
+			}
+		},
+		removePost:{
+			id:{
+				type:"Int",
+				array:false,
+				arrayRequired:false,
+				required:true
+			}
+		}
+	},
+	CreatePostInput:{
+		title:{
+			type:"String",
+			array:false,
+			arrayRequired:false,
+			required:true
+		}
+	},
+	UpdatePostInput:{
+		title:{
+			type:"String",
+			array:false,
+			arrayRequired:false,
+			required:false
+		},
+		id:{
+			type:"Int",
+			array:false,
+			arrayRequired:false,
+			required:true
+		}
+	}
+}
+
+export const ReturnTypes: Record<string,any> = {
+	Post:{
+		id:"Int",
+		title:"String"
+	},
+	Query:{
+		posts:"Post",
+		post:"Post"
+	},
+	Mutation:{
+		createPost:"Post",
+		updatePost:"Post",
+		removePost:"Post"
+	}
+}
